@@ -1,0 +1,63 @@
+REGEDIT4
+
+#OCX Quick Register
+[HKEY_CLASSES_ROOT\.ocx]
+@="ocxfile"
+
+[HKEY_CLASSES_ROOT\ocxfile]
+
+[HKEY_CLASSES_ROOT\ocxfile\DefaultIcon]
+@="%SystemRoot%\\System32\\SHELL32.dll,21"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell]
+@="OCX File"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\Register]
+@="&Register"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\Register\Command]
+@="RegSvr32 %1"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\UnRegister]
+@="&UnRegister"
+
+[HKEY_CLASSES_ROOT\ocxfile\shell\UnRegister\Command]
+@="RegSvr32 /u %1"
+
+#DLL Quick Register
+[HKEY_CLASSES_ROOT\.dll]
+@="dllfile"
+
+[HKEY_CLASSES_ROOT\dllfile]
+
+[HKEY_CLASSES_ROOT\dllfile\DefaultIcon]
+@="%SystemRoot%\\System32\\SHELL32.dll,21"
+
+[HKEY_CLASSES_ROOT\dllfile\shell]
+@="DLL File"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\Register]
+@="&Register"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\Register\Command]
+@="RegSvr32 %1"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\UnRegister]
+@="&UnRegister"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\UnRegister\Command]
+@="RegSvr32 /u %1"
+
+#EXE Quick Register
+
+[HKEY_CLASSES_ROOT\exefile\shell\Register]
+@="&Register"
+
+[HKEY_CLASSES_ROOT\exefile\shell\Register\Command]
+@="%1 /REGSERVER"
+
+[HKEY_CLASSES_ROOT\exefile\shell\UnRegister]
+@="&UnRegister"
+
+[HKEY_CLASSES_ROOT\exefile\shell\UnRegister\Command]
+@="%1 /UNREGSERVER"
